@@ -1,0 +1,11 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+
+
+{% for categorie in data.result.categories %}
+<p> {{categorie.name}} </p>
+{% endfor %}
+
+{% endblock %}
