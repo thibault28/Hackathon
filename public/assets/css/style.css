@@ -5,3 +5,10 @@ body {
 .navbar {
     background-color: rgba(84, 94, 240, 0.541) !important;
 }
+
+p,
+h3,
+h1,
+a {
+    text-shadow: black 1px 0 1px;
+}
