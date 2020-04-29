@@ -1,0 +1,50 @@
+{% extends "layout.html.twig" %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/gallery.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="row mt-4">
+
+    <img src="https://www.drapeauxdespays.fr/data/flags/w580/{{id|lower}}.png" class="offset-lg-1 col-lg-1" alt="">
+    <h1 class="col-lg-8 text-center"> {{pays}} </h1>
+    <img src="https://www.drapeauxdespays.fr/data/flags/w580/{{id|lower}}.png" class="col-lg-1" alt="">
+
+</div>
+
+<hr class="col-lg-10 mt-4 border-line border border-dark">
+<div class="row d-flex justify-content-end mt-4">
+    <select id="filter" class="mr-5">
+        {% for filter in filter.result.categories %}
+        <option value="{{id}}/{{pays}}/{{filter.id}}"> {{filter.name}} </option>
+
+        {% endfor %}
+    </select>
+</div>
+<div class="row mt-5">
+    {% for gallery in data.result.webcams %}
+
+
+    <div class="col-lg-3">
+
+        <a href="/description/index/{{gallery.id}}"><img src="{{gallery.image.current.preview}}"
+                class="col-lg-12 border-radius" alt=""></a>
+
+        <a href="/description/index/{{gallery.id}}" class="text-decoration-none">
+            <p class="col-lg-12 text-center text-dark ">{{gallery.location.city}} </p>
+        </a>
+
+
+    </div>
+    {% endfor %}
+
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="/assets/js/gallery.js"></script>
+{% endblock %}
