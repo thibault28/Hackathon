@@ -7,6 +7,8 @@ class GalleryController extends AbstractController
 {
     public function index($id, $pays, $filtre = null)
     {
+        $pays = urldecode($pays);
+
         if (empty($filtre)) {
             $data = $this->get('https://api.windy.com/api/webcams/v2/list/
             country=' . $id .
