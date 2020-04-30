@@ -23,4 +23,14 @@ class RandomController extends AbstractController
 
         header('Location:/gallery/index/' . $id . '/' . $name);
     }
+
+    public function description()
+    {
+        $data = $this->get('https://api.windy.com/api/webcams/v2/list/orderby=random?show=webcam&key='
+            . APP_API_KEY . '&lang=fr');
+
+        $id = $data["result"]["webcams"][0]["id"];
+
+        header('Location:/description/index/' . $id);
+    }
 }
