@@ -1,6 +1,7 @@
 {% extends "layout.html.twig" %}
 {% block stylesheet %}
 <link rel="stylesheet" href="/assets/css/description/style.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
 {% endblock %}
 {% block content %}
 {% for desc in data.result.webcams %}
@@ -13,17 +14,20 @@
     <hr class="mt-5 mb-5 text-center col-lg-10 col-sm-10 col-10 border border-dark">
 </div>
 <h3 class="text-center mb-5 text-blue">{{desc.location.city}}</h3>
-<img src={{desc.image.current.preview}} class="col-12 offset-lg-2 offset-sm-2 col-lg-8 col-sm-8 justify-content-center">
-<div class="col-lg-12 col-sm-12 col-12 row justify-content-center">
-    <div class="col-lg-8 col-sm-8 col-12 justify-content-center text-blue">
-        <p class="mt-4">Région : {{ desc.location.region }}</p>
-        <p>Continent : {{ desc.location.continent }}</p>
-        <p>Latitude : {{ desc.location.latitude }}</p>
-        <p>Longitude : {{ desc.location.longitude }}</p>
-        <p>Wikipédia : <a href="{{ desc.location.wikipedia|split(' ')|first }}"
+    <div class="row pb-5 pl-lg-5">
+        <img src={{desc.image.current.preview}} class="col-12 col-lg-6 col-sm-8 justify-content-center">
+        <div class="col-lg-6 col-sm-12 col-12 row justify-content-center align-items-center">
+            <div class="col-lg-8 col-sm-8 col-12 justify-content-center text-blue">
+                <p class="mt-4">Région : {{ desc.location.region }}</p>
+                <p>Continent : {{ desc.location.continent }}</p>
+                <p>Latitude : {{ desc.location.latitude }}</p>
+                <p>Longitude : {{ desc.location.longitude }}</p>
+                <p>Wikipédia : <a href="{{ desc.location.wikipedia|split(' ')|first }}"
                 class="text-blue">{{ desc.location.wikipedia|split(' ')|first }}</a>
-        </p>
-    </div>
-</div>
+                </p>
+            </div>
+        </div>
 {% endfor %}
 {% endblock %}
+
+
