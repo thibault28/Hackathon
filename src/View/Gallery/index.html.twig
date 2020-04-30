@@ -10,14 +10,14 @@
 
     <img src="https://www.drapeauxdespays.fr/data/flags/w580/{{id|lower}}.png"
         class="offset-lg-1 col-lg-1 offset-md-1 col-md-2 d-none d-sm-none d-md-block" alt="">
-    <h1 class="col-lg-8 col-md-6 text-center text-white"> {{pays}} </h1>
+    <h1 class="col-lg-8 col-md-6 text-center text-blue"> {{pays}} </h1>
     <img src="https://www.drapeauxdespays.fr/data/flags/w580/{{id|lower}}.png"
         class="col-lg-1 col-md-2 d-sm-none d-none d-md-block" alt="">
 </div>
 
 <hr class="col-lg-10 col-md-8 col-sm-10 col-10 mt-4 border-line border border-dark">
 <div class="row d-flex justify-content-end mt-4 form-group">
-    <label for="filter" class="col-lg-2 col-md-3 col-sm-3 col-4 text-right mt-2 text-white">Filtre</label>
+    <label for="filter" class="col-lg-2 col-md-3 col-sm-3 col-4 text-right mt-2 text-blue">Filtre</label>
     <select id="filter" class="mr-5 form-control col-lg-2 col-md-3 col-sm-3 col-4">
         {% for filter in filter.result.categories %}
         <option value="{{id}}/{{pays}}/{{filter.id}}"> {{filter.name}} </option>
@@ -35,7 +35,7 @@
                 class="col-lg-12 border-radius" alt=""></a>
 
         <a href="/description/index/{{gallery.id}}" class="text-decoration-none">
-            <p class="col-lg-12 text-center text-white ">{{gallery.location.city}} </p>
+            <p class="col-lg-12 text-center text-blue ">{{gallery.location.city}} </p>
         </a>
 
 
