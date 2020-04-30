@@ -13,17 +13,17 @@
         class="col-lg-1 col-md-2 d-sm-none d-none d-md-block" alt="">
     <hr class="mt-5 mb-5 text-center col-lg-10 col-sm-10 col-10 border border-dark">
 </div>
-<h3 class="text-center mb-5 text-white">{{desc.location.city}}</h3>
+<h3 class="text-center mb-5 text-blue">{{desc.location.city}}</h3>
     <div class="row pb-5 pl-lg-5">
         <img src={{desc.image.current.preview}} class="col-12 col-lg-6 col-sm-8 justify-content-center">
         <div class="col-lg-6 col-sm-12 col-12 row justify-content-center align-items-center">
-            <div class="col-lg-8 col-sm-8 col-12 justify-content-center text-white">
+            <div class="col-lg-8 col-sm-8 col-12 justify-content-center text-blue">
                 <p class="mt-4">Région : {{ desc.location.region }}</p>
                 <p>Continent : {{ desc.location.continent }}</p>
                 <p>Latitude : {{ desc.location.latitude }}</p>
                 <p>Longitude : {{ desc.location.longitude }}</p>
                 <p>Wikipédia : <a href="{{ desc.location.wikipedia|split(' ')|first }}"
-                class="text-white">{{ desc.location.wikipedia|split(' ')|first }}</a>
+                class="text-blue">{{ desc.location.wikipedia|split(' ')|first }}</a>
                 </p>
             </div>
         </div>
