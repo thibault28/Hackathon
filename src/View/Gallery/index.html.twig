@@ -17,6 +17,7 @@
 
 <hr class="col-lg-10 col-md-8 col-sm-10 col-10 mt-4 border-line border border-dark">
 <div class="row d-flex justify-content-end mt-4 form-group">
+    <label for="filter" class="col-lg-2 col-md-3 col-sm-3 col-4 text-right mt-2 text-white">Filtre</label>
     <select id="filter" class="mr-5 form-control col-lg-2 col-md-3 col-sm-3 col-4">
         {% for filter in filter.result.categories %}
         <option value="{{id}}/{{pays}}/{{filter.id}}"> {{filter.name}} </option>
